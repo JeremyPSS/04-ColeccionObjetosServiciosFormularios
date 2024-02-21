@@ -7,18 +7,18 @@ import { Bus } from '../Entidades/Bus';
   styleUrl: './principal-bus.component.css'
 })
 export class PrincipalBusComponent {
-  showInsertar: boolean = false;
-  editar: Bus|undefined = undefined;
+  showInsertarBus: boolean = false;
+  editarBus: Bus|undefined = undefined;
 
   toggleInsertarForm(){
-    this.showInsertar = !this.showInsertar;
-    this.editar = undefined;
+    this.showInsertarBus = !this.showInsertarBus;
+    this.editarBus = undefined;
 
   }
 
-  cargarEditar(bus:Bus){
-    this.editar = bus;
-    this.showInsertar = false;
+  cargarEditarBus(bus:Bus){
+    this.editarBus = bus;
+    this.showInsertarBus = false;
   }
   constructor()
   {

@@ -9,16 +9,6 @@ import { DbBusService } from '../Service/db-bus.service';
 })
 export class ListarBusComponent {
   @Output() editarClienteEvent = new EventEmitter<Bus>();
-  get ListaBuses() {
-    return this.obs.getListaChofer;
-  }
-  EditarBus(chofer: Bus) {
-    this.editarClienteEvent.emit(chofer);
-  }
-  EliminarBus(chofer: Bus) {
-    this.obs.DeleteBus(chofer.codigo);
-  }
-
   constructor(private obs: DbBusService) {
 
   }
@@ -26,4 +16,14 @@ export class ListarBusComponent {
 
 
   }
+  get ListaBuses() {
+    return this.obs.getListaBuses;
+  }
+  EditarBus(bus: Bus) {
+    this.editarClienteEvent.emit(bus);
+  }
+  EliminarBus(bus: Bus) {
+    this.obs.DeleteBus(bus.codigo);
+  }
+
 }

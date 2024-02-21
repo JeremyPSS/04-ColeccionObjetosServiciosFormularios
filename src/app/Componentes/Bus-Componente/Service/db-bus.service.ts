@@ -13,31 +13,31 @@ export class DbBusService {
       placa: 'ABC-123',
       tipo: 'urbano',
       base: 'base1',
-      estado: 'libre'
+      estado: 'Libre'
     },
     {
       codigo: 2,
       placa: 'CDE-123',
       tipo: 'rural',
       base: 'base2',
-      estado: 'mantenimiento'
+      estado: 'Mantenimiento'
     },
     {
       codigo: 3,
       placa: 'FGH-123',
       tipo: 'urbano',
       base: 'base3',
-      estado: 'libre'
+      estado: 'Libre'
     },
     {
-      codigo: 2,
+      codigo: 4,
       placa: 'IJK-123',
       tipo: 'rural',
       base: 'base4',
-      estado: 'mantenimiento'
+      estado: 'Mantenimiento'
   }];
   
-  get getListaChofer():Bus[]
+  get getListaBuses():Bus[]
     {
       return this.ListaBuses;
     }

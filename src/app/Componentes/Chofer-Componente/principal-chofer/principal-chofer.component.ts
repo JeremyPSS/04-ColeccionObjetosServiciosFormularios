@@ -7,18 +7,18 @@ import { Chofer } from '../Entidades/Chofer';
   styleUrl: './principal-chofer.component.css'
 })
 export class PrincipalChoferComponent {
-  showInsertar: boolean = false;
+  showInsertarChofer: boolean = false;
   editar: Chofer|undefined = undefined;
 
   toggleInsertarForm(){
-    this.showInsertar = !this.showInsertar;
+    this.showInsertarChofer = !this.showInsertarChofer;
     this.editar = undefined;
 
   }
 
   cargarEditar(chofer:Chofer){
     this.editar = chofer;
-    this.showInsertar = false;
+    this.showInsertarChofer = false;
   }
   constructor()
   {
