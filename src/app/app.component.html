@@ -1,0 +1,75 @@
+<!-- <app-principal-chofer></app-principal-chofer>
+<app-insertar-bus></app-insertar-bus> -->
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#" id="home-tab" class="nav-link active" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#home"></use>
+                </svg>
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#" id="bus-tab" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                Bus
+            </a>
+        </li>
+        <li>
+            <a href="#" id="chofer-tab" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#people-circle"></use>
+                </svg>
+                Chofer
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade show active">
+        <!-- Content for Home tab -->
+    </div>
+    <div id="bus" class="tab-pane fade">
+        <!-- Content for Bus tab -->
+        <app-insertar-bus></app-insertar-bus>
+    </div>
+    <div id="chofer" class="tab-pane fade">
+        <!-- Content for Chofer tab -->
+        <app-principal-chofer></app-principal-chofer>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle tab switching
+    document.getElementById('bus-tab').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('home').classList.remove('show', 'active');
+        document.getElementById('bus').classList.add('show', 'active');
+        document.getElementById('chofer').classList.remove('show', 'active');
+    });
+
+    document.getElementById('chofer-tab').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('home').classList.remove('show', 'active');
+        document.getElementById('bus').classList.remove('show', 'active');
+        document.getElementById('chofer').classList.add('show', 'active');
+    });
+
+    document.getElementById('home-tab').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('home').classList.add('show', 'active');
+        document.getElementById('bus').classList.remove('show', 'active');
+        document.getElementById('chofer').classList.remove('show', 'active');
+    });
+</script>
