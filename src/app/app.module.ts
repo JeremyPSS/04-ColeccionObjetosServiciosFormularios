@@ -12,6 +12,7 @@ import { InsertarBusComponent } from './Componentes/Bus-Componente/insertar-bus/
 import { ModificarBusComponent } from './Componentes/Bus-Componente/modificar-bus/modificar-bus.component';
 import { ListarBusComponent } from './Componentes/Bus-Componente/listar-bus/listar-bus.component';
 import { PrincipalBusComponent } from './Componentes/Bus-Componente/principal-bus/principal-bus.component';
+import { ToolBarComponent } from './Componentes/tool-bar/tool-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PrincipalBusComponent } from './Componentes/Bus-Componente/principal-bu
     InsertarBusComponent,
     ModificarBusComponent,
     ListarBusComponent,
-    PrincipalBusComponent
+    PrincipalBusComponent,
+    ToolBarComponent
   ],
   imports: [
     BrowserModule,
